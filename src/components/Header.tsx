@@ -25,7 +25,7 @@ export default function Header() {
                 <span className="text-white font-bold text-sm">M</span>
               </div>
             </div>
-            <span className="text-xl font-bold text-white">Manifesto</span>
+            <span className="text-xl font-bold text-white">Manifesto AI</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -43,7 +43,7 @@ export default function Header() {
               How It Works
             </Link>
             <Link
-              href="https://github.com/eggplantiny/manifesto-ai"
+              href="https://github.com/manifesto-ai/core.git"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-slate-300 hover:text-white transition-colors flex items-center gap-1"
@@ -98,7 +98,7 @@ export default function Header() {
                 How It Works
               </Link>
               <Link
-                href="https://github.com/eggplantiny/manifesto-ai"
+                href="https://github.com/manifesto-ai/core.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-slate-300 hover:text-white transition-colors flex items-center gap-1"

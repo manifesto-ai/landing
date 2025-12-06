@@ -6,20 +6,20 @@ import Link from "next/link";
 
 const links = {
   resources: [
-    { label: "Documentation", href: "https://github.com/eggplantiny/manifesto-ai#documentation" },
-    { label: "Getting Started", href: "https://github.com/eggplantiny/manifesto-ai#quick-start" },
-    { label: "Examples", href: "https://github.com/eggplantiny/manifesto-ai#live-examples" },
-    { label: "Playground", href: "https://manifesto-ai-playground.vercel.app" },
+    { label: "Documentation", href: "https://github.com/manifesto-ai/core.git#documentation" },
+    { label: "Getting Started", href: "https://github.com/manifesto-ai/core.git#quick-start" },
+    { label: "Examples", href: "https://github.com/manifesto-ai/core.git#live-examples" },
+    { label: "Playground", href: "https://playground.manifesto-ai.dev" },
   ],
   community: [
-    { label: "GitHub", href: "https://github.com/eggplantiny/manifesto-ai", icon: Github },
-    { label: "Twitter", href: "https://twitter.com/manifesto_ai", icon: Twitter },
+    { label: "GitHub", href: "https://github.com/manifesto-ai/core.git", icon: Github },
+    { label: "Twitter", href: "https://x.com/manifesto__ai", icon: Twitter },
     { label: "Discord", href: "#", icon: MessageCircle },
   ],
-  demos: [
-    { label: "React Storybook", href: "https://eggplantiny.github.io/manifesto-ai/react/" },
-    { label: "Vue Storybook", href: "https://eggplantiny.github.io/manifesto-ai/vue/" },
-  ],
+  // demos: [
+  //   { label: "React Storybook", href: "https://eggplantiny.github.io/manifesto-ai/react/" },
+  //   { label: "Vue Storybook", href: "https://eggplantiny.github.io/manifesto-ai/vue/" },
+  // ],
 };
 
 export default function Footer() {
@@ -45,7 +45,7 @@ export default function Footer() {
                   <span className="text-white font-bold text-sm">M</span>
                 </div>
               </div>
-              <span className="text-xl font-bold text-white">Manifesto</span>
+              <span className="text-xl font-bold text-white">Manifesto AI</span>
             </Link>
             <p className="text-sm text-slate-400 mb-4">
               AI-Native Semantic UI State Layer. Turn any form into a
@@ -93,29 +93,29 @@ export default function Footer() {
           </motion.div>
 
           {/* Live Demos */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h4 className="text-sm font-semibold text-white mb-4">Live Demos</h4>
-            <ul className="space-y-3">
-              {links.demos.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1"
-                  >
-                    {link.label}
-                    <ExternalLink className="w-3 h-3" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+          {/*<motion.div*/}
+          {/*  initial={{ opacity: 0, y: 20 }}*/}
+          {/*  whileInView={{ opacity: 1, y: 0 }}*/}
+          {/*  viewport={{ once: true }}*/}
+          {/*  transition={{ duration: 0.5, delay: 0.2 }}*/}
+          {/*>*/}
+          {/*  <h4 className="text-sm font-semibold text-white mb-4">Live Demos</h4>*/}
+          {/*  <ul className="space-y-3">*/}
+          {/*    {links.demos.map((link) => (*/}
+          {/*      <li key={link.label}>*/}
+          {/*        <Link*/}
+          {/*          href={link.href}*/}
+          {/*          target="_blank"*/}
+          {/*          rel="noopener noreferrer"*/}
+          {/*          className="text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1"*/}
+          {/*        >*/}
+          {/*          {link.label}*/}
+          {/*          <ExternalLink className="w-3 h-3" />*/}
+          {/*        </Link>*/}
+          {/*      </li>*/}
+          {/*    ))}*/}
+          {/*  </ul>*/}
+          {/*</motion.div>*/}
 
           {/* Newsletter / CTA */}
           <motion.div
@@ -135,7 +135,7 @@ export default function Footer() {
                 pnpm add @manifesto-ai/schema @manifesto-ai/engine
               </code>
               <Link
-                href="https://github.com/eggplantiny/manifesto-ai"
+                href="https://github.com/manifesto-ai/core.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 transition-all"
@@ -156,7 +156,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-6">
               <Link
-                href="https://github.com/eggplantiny/manifesto-ai/blob/main/LICENSE"
+                href="https://github.com/manifesto-ai/core.git/blob/main/LICENSE"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-slate-500 hover:text-slate-400 transition-colors"
@@ -164,7 +164,7 @@ export default function Footer() {
                 License
               </Link>
               <Link
-                href="https://github.com/eggplantiny/manifesto-ai/blob/main/CONTRIBUTING.md"
+                href="https://github.com/manifesto-ai/core.git/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-slate-500 hover:text-slate-400 transition-colors"

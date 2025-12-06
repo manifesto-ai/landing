@@ -1,8 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Play, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const InteractiveDemo = dynamic(() => import("./InteractiveDemo"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full max-w-4xl mx-auto">
+      <div className="gradient-border glow">
+        <div className="bg-slate-900 rounded-t-xl border-b border-slate-700 px-4 py-3 flex items-center gap-2">
+          <div className="flex gap-2">
+            <div className="w-3 h-3 rounded-full bg-red-500/80" />
+            <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+            <div className="w-3 h-3 rounded-full bg-green-500/80" />
+          </div>
+          <div className="flex-1 text-center">
+            <span className="text-xs text-slate-500 font-mono">
+              https://playground.manifesto-ai.dev
+            </span>
+          </div>
+        </div>
+        <div className="bg-slate-900/50 rounded-b-xl p-8 min-h-[400px] flex items-center justify-center">
+          <div className="text-slate-500 text-sm">Loading interactive demo...</div>
+        </div>
+      </div>
+    </div>
+  ),
+});
 
 export default function Hero() {
   return (
@@ -100,46 +126,14 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Demo Window */}
+        {/* Interactive Demo */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 max-w-4xl mx-auto"
+          className="mt-16"
         >
-          <div className="gradient-border glow">
-            {/* Window Chrome */}
-            <div className="bg-slate-900 rounded-t-xl border-b border-slate-700 px-4 py-3 flex items-center gap-2">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                <div className="w-3 h-3 rounded-full bg-green-500/80" />
-              </div>
-              <div className="flex-1 text-center">
-                <span className="text-xs text-slate-500 font-mono">
-                  https://playground.manifesto-ai.dev
-                </span>
-              </div>
-            </div>
-
-            {/* Demo Content Placeholder */}
-            <div className="bg-slate-900/50 rounded-b-xl p-8 min-h-[300px] flex flex-col items-center justify-center">
-              <div className="relative group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-full blur-xl group-hover:blur-2xl transition-all" />
-                <div className="relative w-20 h-20 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-white ml-1" />
-                </div>
-              </div>
-              <p className="mt-6 text-sm text-slate-400">
-                AI understands your form&apos;s semantic context and can fill fields
-                intelligently
-              </p>
-              <div className="mt-4 flex items-center gap-2 text-xs text-slate-500">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Interactive demo coming soon</span>
-              </div>
-            </div>
-          </div>
+          <InteractiveDemo />
         </motion.div>
       </div>
     </section>
