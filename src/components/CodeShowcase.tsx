@@ -2,7 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Copy, FileCode, Sparkles, Terminal, Bot } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { codeToHtml } from "shiki";
 
 const tabs = [
   {
@@ -60,13 +61,20 @@ const productView = view('product-form', 'Create Product', '1.0.0')
     language: "tsx",
     filename: "ProductForm.tsx",
     code: `import { FormRenderer } from '@manifesto-ai/react'
-import '@manifesto-ai/react/styles'
+import { shadcnRegistry } from './registries/shadcn'
 
-<FormRenderer
-  schema={productView}
-  entitySchema={productEntity}
-  onSubmit={(data) => console.log(data)}
-/>`,
+export default function ProductForm() {
+  return (
+    <FormRenderer
+      schema={productView}
+      entitySchema={productEntity}
+      initialValues={initialValues}
+      fieldRegistry={shadcnRegistry}
+      onSubmit={handleSubmit}
+      onError={handleError}
+    />
+  )
+}`,
   },
   session: {
     language: "typescript",
@@ -125,32 +133,19 @@ session.dispatch({
 
 function CodeBlock({ code, language, filename }: { code: string; language: string; filename: string }) {
   const [copied, setCopied] = useState(false);
+  const [highlightedCode, setHighlightedCode] = useState<string>("");
+
+  useEffect(() => {
+    codeToHtml(code, {
+      lang: language,
+      theme: "github-dark",
+    }).then(setHighlightedCode);
+  }, [code, language]);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-  };
-
-  const highlightSyntax = (code: string, lang: string) => {
-    if (lang === "json") {
-      return code
-        .replace(/"([^"]+)":/g, '<span class="text-cyan-400">"$1"</span>:')
-        .replace(/: "([^"]+)"/g, ': <span class="text-emerald-400">"$1"</span>')
-        .replace(/: (\d+)/g, ': <span class="text-amber-400">$1</span>')
-        .replace(/: (true|false|null)/g, ': <span class="text-purple-400">$1</span>')
-        .replace(/: (\[.*?\])/g, ': <span class="text-emerald-400">$1</span>');
-    }
-
-    if (lang === "typescript" || lang === "tsx") {
-      return code
-        .replace(/(import|from|const|function|return|export)/g, '<span class="text-purple-400">$1</span>')
-        .replace(/('[@\w\/-]+')/g, '<span class="text-emerald-400">$1</span>')
-        .replace(/(\.[a-zA-Z]+)\(/g, '<span class="text-cyan-400">$1</span>(')
-        .replace(/(\/\/.*$)/gm, '<span class="text-slate-500">$1</span>');
-    }
-
-    return code;
   };
 
   return (
@@ -184,13 +179,17 @@ function CodeBlock({ code, language, filename }: { code: string; language: strin
       </div>
 
       {/* Code */}
-      <div className="p-4 overflow-x-auto">
-        <pre className="text-sm leading-relaxed">
-          <code
-            className="font-mono text-slate-300"
-            dangerouslySetInnerHTML={{ __html: highlightSyntax(code, language) }}
+      <div className="p-4 overflow-x-auto [&_pre]:!bg-transparent [&_code]:!bg-transparent">
+        {highlightedCode ? (
+          <div
+            className="text-sm leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: highlightedCode }}
           />
-        </pre>
+        ) : (
+          <pre className="text-sm leading-relaxed">
+            <code className="font-mono text-slate-300">{code}</code>
+          </pre>
+        )}
       </div>
     </div>
   );
