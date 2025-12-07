@@ -14,7 +14,7 @@
 
 *AI understands your form's semantic context and can fill fields intelligently*
 
-**[🎮 Try the Playground](https://manifesto-ai-playground.vercel.app)** • **[📖 Docs](#documentation)**
+**[🎮 Try the Playground](https://playground.manifesto-ai.dev)** • **[📖 Docs](#documentation)**
 
 </div>
 
@@ -316,7 +316,7 @@ viewField.select('city', 'city')
 
 | | |
 |---|---|
-| 🎮 **[Playground](https://manifesto-ai-playground.vercel.app)** | Edit schemas, preview forms, chat with AI |
+| 🎮 **[Playground](https://playground.manifesto-ai.dev)** | Edit schemas, preview forms, chat with AI |
 | 📚 **[React Storybook](https://eggplantiny.github.io/manifesto-ai/react/)** | Component gallery |
 | 📚 **[Vue Storybook](https://eggplantiny.github.io/manifesto-ai/vue/)** | Component gallery |
 

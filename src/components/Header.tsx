@@ -52,7 +52,7 @@ export default function Header() {
               GitHub
             </Link>
             <Link
-              href="https://manifesto-ai-playground.vercel.app"
+              href="https://playground.manifesto-ai.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 text-sm font-medium text-white rounded-lg border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-all"
@@ -107,7 +107,7 @@ export default function Header() {
                 GitHub
               </Link>
               <Link
-                href="https://manifesto-ai-playground.vercel.app"
+                href="https://playground.manifesto-ai.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 text-sm font-medium text-white rounded-lg border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-all text-center"
