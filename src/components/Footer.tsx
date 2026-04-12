@@ -1,19 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Twitter, MessageCircle, ExternalLink } from "lucide-react";
+import { Github, Twitter, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 const links = {
   resources: [
-    { label: "Documentation", href: "https://manifesto-ai.dev" },
-    { label: "Quick Start", href: "https://manifesto-ai.dev/guide/quick-start" },
-    { label: "API Reference", href: "https://manifesto-ai.dev/api/" },
+    { label: "Documentation", href: "https://doc.manifesto-ai.dev" },
+    { label: "Quick Start", href: "https://doc.manifesto-ai.dev/guide/quick-start" },
+    { label: "API Reference", href: "https://doc.manifesto-ai.dev/api/" },
   ],
   community: [
     { label: "GitHub", href: "https://github.com/manifesto-ai/core", icon: Github },
     { label: "Twitter", href: "https://x.com/manifesto__ai", icon: Twitter },
-    { label: "Discord", href: "#", icon: MessageCircle },
   ],
 };
 

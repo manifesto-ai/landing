@@ -55,7 +55,7 @@ export default function Header() {
               Architecture
             </Link>
             <Link
-              href="https://manifesto-ai.dev"
+              href="https://doc.manifesto-ai.dev"
               className="text-sm text-muted-foreground hover:text-white transition-colors"
             >
               Docs
@@ -70,7 +70,7 @@ export default function Header() {
               GitHub
             </Link>
             <Link
-              href="https://manifesto-ai.dev/guide/quick-start"
+              href="https://doc.manifesto-ai.dev/guide/quick-start"
               className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 transition-colors"
             >
               Get Started
@@ -128,7 +128,7 @@ export default function Header() {
                 Architecture
               </Link>
               <Link
-                href="https://manifesto-ai.dev"
+                href="https://doc.manifesto-ai.dev"
                 className="text-sm text-muted-foreground hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -144,7 +144,7 @@ export default function Header() {
                 GitHub
               </Link>
               <Link
-                href="https://manifesto-ai.dev/guide/quick-start"
+                href="https://doc.manifesto-ai.dev/guide/quick-start"
                 className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 transition-colors text-center"
               >
                 Get Started
