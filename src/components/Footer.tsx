@@ -6,27 +6,21 @@ import Link from "next/link";
 
 const links = {
   resources: [
-    { label: "Documentation", href: "https://github.com/manifesto-ai/core.git#documentation" },
-    { label: "Getting Started", href: "https://github.com/manifesto-ai/core.git#quick-start" },
-    { label: "Examples", href: "https://github.com/manifesto-ai/core.git#live-examples" },
-    { label: "Playground", href: "https://playground.manifesto-ai.dev" },
+    { label: "Documentation", href: "https://manifesto-ai.dev" },
+    { label: "Quick Start", href: "https://manifesto-ai.dev/guide/quick-start" },
+    { label: "API Reference", href: "https://manifesto-ai.dev/api/" },
   ],
   community: [
-    { label: "GitHub", href: "https://github.com/manifesto-ai/core.git", icon: Github },
+    { label: "GitHub", href: "https://github.com/manifesto-ai/core", icon: Github },
     { label: "Twitter", href: "https://x.com/manifesto__ai", icon: Twitter },
     { label: "Discord", href: "#", icon: MessageCircle },
   ],
-  // demos: [
-  //   { label: "React Storybook", href: "https://eggplantiny.github.io/manifesto-ai/react/" },
-  //   { label: "Vue Storybook", href: "https://eggplantiny.github.io/manifesto-ai/vue/" },
-  // ],
 };
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-slate-800">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent pointer-events-none" />
+    <footer className="relative border-t border-border">
+      <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -40,16 +34,16 @@ export default function Footer() {
           >
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="relative w-8 h-8">
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 blur-sm opacity-75" />
-                <div className="relative w-full h-full rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 blur-sm opacity-75" />
+                <div className="relative w-full h-full rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">M</span>
                 </div>
               </div>
-              <span className="text-xl font-bold text-white">Manifesto AI</span>
+              <span className="text-xl font-bold text-white">Manifesto</span>
             </Link>
-            <p className="text-sm text-slate-400 mb-4">
-              AI-Native Semantic UI State Layer. Turn any form into a
-              machine-readable interface for LLM agents.
+            <p className="text-sm text-muted-foreground mb-4">
+              Semantic Layer for Deterministic Domain State. Define once, compute
+              everywhere.
             </p>
             <div className="flex items-center gap-4">
               {links.community.map((link) => (
@@ -58,7 +52,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="text-muted-foreground hover:text-white transition-colors"
                   aria-label={link.label}
                 >
                   <link.icon className="w-5 h-5" />
@@ -80,9 +74,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+                    className="text-sm text-muted-foreground hover:text-white transition-colors flex items-center gap-1"
                   >
                     {link.label}
                     <ExternalLink className="w-3 h-3" />
@@ -92,32 +84,24 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Live Demos */}
-          {/*<motion.div*/}
-          {/*  initial={{ opacity: 0, y: 20 }}*/}
-          {/*  whileInView={{ opacity: 1, y: 0 }}*/}
-          {/*  viewport={{ once: true }}*/}
-          {/*  transition={{ duration: 0.5, delay: 0.2 }}*/}
-          {/*>*/}
-          {/*  <h4 className="text-sm font-semibold text-white mb-4">Live Demos</h4>*/}
-          {/*  <ul className="space-y-3">*/}
-          {/*    {links.demos.map((link) => (*/}
-          {/*      <li key={link.label}>*/}
-          {/*        <Link*/}
-          {/*          href={link.href}*/}
-          {/*          target="_blank"*/}
-          {/*          rel="noopener noreferrer"*/}
-          {/*          className="text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1"*/}
-          {/*        >*/}
-          {/*          {link.label}*/}
-          {/*          <ExternalLink className="w-3 h-3" />*/}
-          {/*        </Link>*/}
-          {/*      </li>*/}
-          {/*    ))}*/}
-          {/*  </ul>*/}
-          {/*</motion.div>*/}
+          {/* Packages */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h4 className="text-sm font-semibold text-white mb-4">Packages</h4>
+            <ul className="space-y-2 text-xs font-mono text-muted-foreground">
+              <li>@manifesto-ai/sdk</li>
+              <li>@manifesto-ai/core</li>
+              <li>@manifesto-ai/governance</li>
+              <li>@manifesto-ai/lineage</li>
+              <li>@manifesto-ai/compiler</li>
+            </ul>
+          </motion.div>
 
-          {/* Newsletter / CTA */}
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -127,18 +111,15 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4">
               Get Started
             </h4>
-            <p className="text-sm text-slate-400 mb-4">
-              Ready to make your UI AI-ready?
-            </p>
             <div className="space-y-3">
-              <code className="block text-xs bg-slate-800/50 rounded-lg px-3 py-2 text-emerald-400 font-mono">
-                pnpm add @manifesto-ai/schema @manifesto-ai/engine
+              <code className="block text-xs bg-violet-500/5 border border-violet-500/10 rounded-lg px-3 py-2 text-violet-400 font-mono">
+                pnpm add @manifesto-ai/sdk
               </code>
               <Link
-                href="https://github.com/manifesto-ai/core.git"
+                href="https://github.com/manifesto-ai/core"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-violet-600 to-purple-500 hover:from-violet-700 hover:to-purple-600 transition-all"
               >
                 <Github className="w-4 h-4" />
                 View on GitHub
@@ -148,26 +129,26 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-slate-800">
+        <div className="pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-slate-500">
-              {new Date().getFullYear()} Manifesto AI. Open Source under MIT
+            <p className="text-sm text-muted">
+              {new Date().getFullYear()} Manifesto. Open Source under MIT
               License.
             </p>
             <div className="flex items-center gap-6">
               <Link
-                href="https://github.com/manifesto-ai/core.git/blob/main/LICENSE"
+                href="https://github.com/manifesto-ai/core/blob/main/LICENSE"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-slate-500 hover:text-slate-400 transition-colors"
+                className="text-sm text-muted hover:text-muted-foreground transition-colors"
               >
                 License
               </Link>
               <Link
-                href="https://github.com/manifesto-ai/core.git/blob/main/CONTRIBUTING.md"
+                href="https://github.com/manifesto-ai/core/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-slate-500 hover:text-slate-400 transition-colors"
+                className="text-sm text-muted hover:text-muted-foreground transition-colors"
               >
                 Contributing
               </Link>
