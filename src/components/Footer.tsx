@@ -41,7 +41,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               {links.community.map((link) => (
-                <Link
+                <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
@@ -50,7 +50,7 @@ export default function Footer() {
                   aria-label={link.label}
                 >
                   <link.icon className="w-5 h-5" />
-                </Link>
+                </a>
               ))}
             </div>
           </motion.div>
@@ -66,13 +66,13 @@ export default function Footer() {
             <ul className="space-y-3">
               {links.resources.map((link) => (
                 <li key={link.label}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-white transition-colors flex items-center gap-1"
                   >
                     {link.label}
                     <ExternalLink className="w-3 h-3" />
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -109,7 +109,7 @@ export default function Footer() {
               <code className="block text-xs bg-violet-500/5 border border-violet-500/10 rounded-lg px-3 py-2 text-violet-400 font-mono">
                 pnpm add @manifesto-ai/sdk
               </code>
-              <Link
+              <a
                 href="https://github.com/manifesto-ai/core"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -117,7 +117,7 @@ export default function Footer() {
               >
                 <Github className="w-4 h-4" />
                 View on GitHub
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -130,22 +130,22 @@ export default function Footer() {
               License.
             </p>
             <div className="flex items-center gap-6">
-              <Link
+              <a
                 href="https://github.com/manifesto-ai/core/blob/main/LICENSE"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted hover:text-muted-foreground transition-colors"
               >
                 License
-              </Link>
-              <Link
+              </a>
+              <a
                 href="https://github.com/manifesto-ai/core/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted hover:text-muted-foreground transition-colors"
               >
                 Contributing
-              </Link>
+              </a>
             </div>
           </div>
         </div>

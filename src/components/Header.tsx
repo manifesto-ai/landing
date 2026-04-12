@@ -49,13 +49,13 @@ export default function Header() {
             >
               Architecture
             </Link>
-            <Link
+            <a
               href="https://docs.manifesto-ai.dev"
               className="text-sm text-muted-foreground hover:text-white transition-colors"
             >
               Docs
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://github.com/manifesto-ai/core"
               target="_blank"
               rel="noopener noreferrer"
@@ -63,13 +63,13 @@ export default function Header() {
             >
               <Github className="w-4 h-4" />
               GitHub
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://docs.manifesto-ai.dev/guide/quick-start"
               className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 transition-colors"
             >
               Get Started
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -122,14 +122,14 @@ export default function Header() {
               >
                 Architecture
               </Link>
-              <Link
+              <a
                 href="https://docs.manifesto-ai.dev"
                 className="text-sm text-muted-foreground hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Docs
-              </Link>
-              <Link
+              </a>
+              <a
                 href="https://github.com/manifesto-ai/core"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -137,13 +137,13 @@ export default function Header() {
               >
                 <Github className="w-4 h-4" />
                 GitHub
-              </Link>
-              <Link
+              </a>
+              <a
                 href="https://docs.manifesto-ai.dev/guide/quick-start"
                 className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 transition-colors text-center"
               >
                 Get Started
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}
