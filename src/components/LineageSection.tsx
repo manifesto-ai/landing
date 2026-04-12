@@ -142,6 +142,9 @@ export default function LineageSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Lineage &amp; Time Travel
           </h2>
+          <p className="text-sm text-violet-400 font-medium mb-2">
+            Not just undo — trace exactly why any value became what it is.
+          </p>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Every state change is tracked. Navigate through history and restore
             any previous state instantly.
