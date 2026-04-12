@@ -155,6 +155,9 @@ export default function SimulationSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Simulation Sandbox
           </h2>
+          <p className="text-sm text-violet-400 font-medium mb-2">
+            Not just preview — deterministic prediction guaranteed by pure computation.
+          </p>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Preview the effect of any action <em>before</em> executing it.
             Use <code className="text-violet-400">why()</code> and <code className="text-violet-400">whyNot()</code> to understand exactly what will happen.

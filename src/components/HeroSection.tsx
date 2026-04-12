@@ -62,12 +62,22 @@ export default function HeroSection() {
             </span>
           </motion.h1>
 
-          {/* Subheadline */}
+          {/* Value prop */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground mb-8"
+            className="max-w-2xl mx-auto text-lg sm:text-xl text-white/90 font-medium mb-4"
+          >
+            Define state once. Get governance, lineage, and simulation for free.
+          </motion.p>
+
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground mb-8"
           >
             Define your domain once in MEL, then{" "}
             <span className="text-white font-medium">compute</span>,{" "}
@@ -94,7 +104,7 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Link
-              href="https://doc.manifesto-ai.dev/guide/quick-start"
+              href="https://docs.manifesto-ai.dev/guide/quick-start"
               className="group relative px-8 py-4 rounded-xl font-medium text-white overflow-hidden transition-all hover:scale-105"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-purple-500" />
@@ -106,7 +116,7 @@ export default function HeroSection() {
             </Link>
 
             <Link
-              href="https://doc.manifesto-ai.dev/guide/introduction"
+              href="https://docs.manifesto-ai.dev/guide/introduction"
               className="px-8 py-4 rounded-xl font-medium text-white border border-violet-500/20 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all"
             >
               Learn the Model

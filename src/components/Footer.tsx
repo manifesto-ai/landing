@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const links = {
   resources: [
-    { label: "Documentation", href: "https://doc.manifesto-ai.dev" },
-    { label: "Quick Start", href: "https://doc.manifesto-ai.dev/guide/quick-start" },
-    { label: "API Reference", href: "https://doc.manifesto-ai.dev/api/" },
+    { label: "Documentation", href: "https://docs.manifesto-ai.dev" },
+    { label: "Quick Start", href: "https://docs.manifesto-ai.dev/guide/quick-start" },
+    { label: "API Reference", href: "https://docs.manifesto-ai.dev/api/" },
   ],
   community: [
     { label: "GitHub", href: "https://github.com/manifesto-ai/core", icon: Github },
@@ -32,12 +32,7 @@ export default function Footer() {
             className="md:col-span-1"
           >
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="relative w-8 h-8">
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 blur-sm opacity-75" />
-                <div className="relative w-full h-full rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">M</span>
-                </div>
-              </div>
+              <img src="/logo.png" alt="Manifesto" className="w-8 h-8 rounded-lg" />
               <span className="text-xl font-bold text-white">Manifesto</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">

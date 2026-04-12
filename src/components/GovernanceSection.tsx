@@ -218,6 +218,9 @@ export default function GovernanceSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Governance
           </h2>
+          <p className="text-sm text-violet-400 font-medium mb-2">
+            Not just permissions — full authority evaluation with audit trail.
+          </p>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Control who can do what. Toggle between auto-approve and
             human-in-the-loop to see how policy changes the flow.
