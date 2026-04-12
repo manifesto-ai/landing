@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import Link from "next/link";
+
 import dynamic from "next/dynamic";
 
 const CounterDemo = dynamic(() => import("./CounterDemo"), {
@@ -103,7 +103,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link
+            <a
               href="https://docs.manifesto-ai.dev/guide/quick-start"
               className="group relative px-8 py-4 rounded-xl font-medium text-white overflow-hidden transition-all hover:scale-105"
             >
@@ -113,14 +113,14 @@ export default function HeroSection() {
                 Get Started
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
-            </Link>
+            </a>
 
-            <Link
+            <a
               href="https://docs.manifesto-ai.dev/guide/introduction"
               className="px-8 py-4 rounded-xl font-medium text-white border border-violet-500/20 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all"
             >
               Learn the Model
-            </Link>
+            </a>
           </motion.div>
         </div>
 
