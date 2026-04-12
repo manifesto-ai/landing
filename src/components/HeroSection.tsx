@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, ExternalLink } from "lucide-react";
 
 import dynamic from "next/dynamic";
 
@@ -124,6 +124,16 @@ export default function HeroSection() {
               className="px-8 py-4 rounded-xl font-medium text-white border border-violet-500/20 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all"
             >
               Learn the Model
+            </a>
+
+            <a
+              href="https://taskflow.manifesto-ai.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-xl font-medium text-violet-300 border border-violet-500/20 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all flex items-center gap-2"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Live Demo with AI Agent
             </a>
           </motion.div>
         </div>
