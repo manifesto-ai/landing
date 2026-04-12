@@ -128,7 +128,13 @@ export default function FlowXRaySection() {
         {!ready ? (
           <div className="text-center text-muted p-8">Loading runtime...</div>
         ) : (
-          <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-8"
+          >
             {/* Flow Pipeline */}
             <div
               ref={scrollRef}
@@ -265,7 +271,7 @@ export default function FlowXRaySection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
     </section>
