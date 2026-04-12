@@ -26,12 +26,14 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://manifesto-ai.dev",
     siteName: "Manifesto",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Manifesto — Semantic Layer for Deterministic Domain State" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Manifesto — Deterministic Semantic Runtime",
     description: "Define state once. Get governance, lineage, and simulation for free.",
     creator: "@eggplantiny",
+    images: ["/og-image.png"],
   },
 };
 
