@@ -15,19 +15,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Manifesto AI - AI-Native Semantic UI State Layer",
-  description: "The only UI framework where AI agents can truly understand, reason about, and interact with your interface—not just see pixels.",
-  keywords: ["AI", "UI", "Forms", "Schema", "React", "Vue", "TypeScript", "LLM", "Machine Learning"],
+  title: "Manifesto — Semantic Layer for Deterministic Domain State",
+  description: "Define state once. Get governance, lineage, and simulation for free. A deterministic runtime where every state change is traceable, every action is governable, and every outcome is predictable.",
+  keywords: ["state management", "deterministic", "governance", "lineage", "simulation", "TypeScript", "MEL", "domain modeling", "reactive", "SDK"],
   authors: [{ name: "Manifesto AI" }],
+  metadataBase: new URL("https://manifesto-ai.dev"),
   openGraph: {
-    title: "Manifesto AI - AI-Native Semantic UI State Layer",
-    description: "Turn any form into a machine-readable interface for LLM agents.",
+    title: "Manifesto — Define state once, govern everything",
+    description: "Not just state management. A deterministic semantic runtime with built-in governance, lineage tracking, and simulation.",
     type: "website",
+    url: "https://manifesto-ai.dev",
+    siteName: "Manifesto",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Manifesto AI",
-    description: "AI-Native Semantic UI State Layer",
+    title: "Manifesto — Deterministic Semantic Runtime",
+    description: "Define state once. Get governance, lineage, and simulation for free.",
+    creator: "@eggplantiny",
   },
 };
 
