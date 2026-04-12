@@ -167,7 +167,13 @@ export default function SimulationSection() {
         {!ready ? (
           <div className="text-center text-muted p-8">Loading runtime...</div>
         ) : (
-          <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-6"
+          >
             {/* Available Actions Badge */}
             <div className="gradient-border">
               <div className="bg-card rounded-xl p-4">
@@ -413,7 +419,7 @@ export default function SimulationSection() {
                 </div>
               </motion.div>
             )}
-          </div>
+          </motion.div>
         )}
       </div>
     </section>

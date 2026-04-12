@@ -230,7 +230,13 @@ export default function GovernanceSection() {
         {!ready ? (
           <div className="text-center text-muted p-8">Loading runtime...</div>
         ) : (
-          <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-6"
+          >
             {/* Mode Toggle */}
             <div className="flex items-center justify-center gap-4">
               <button
@@ -443,7 +449,7 @@ export default function GovernanceSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
     </section>
