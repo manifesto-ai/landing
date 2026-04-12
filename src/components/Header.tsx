@@ -51,6 +51,8 @@ export default function Header() {
             </Link>
             <a
               href="https://docs.manifesto-ai.dev"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-white transition-colors"
             >
               Docs
@@ -66,6 +68,8 @@ export default function Header() {
             </a>
             <a
               href="https://docs.manifesto-ai.dev/guide/quick-start"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 transition-colors"
             >
               Get Started
@@ -124,6 +128,8 @@ export default function Header() {
               </Link>
               <a
                 href="https://docs.manifesto-ai.dev"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -140,6 +146,8 @@ export default function Header() {
               </a>
               <a
                 href="https://docs.manifesto-ai.dev/guide/quick-start"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 transition-colors text-center"
               >
                 Get Started

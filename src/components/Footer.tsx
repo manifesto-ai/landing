@@ -12,7 +12,7 @@ const links = {
   ],
   community: [
     { label: "GitHub", href: "https://github.com/manifesto-ai/core", icon: Github },
-    { label: "Twitter", href: "https://x.com/manifesto__ai", icon: Twitter },
+    { label: "Twitter", href: "https://x.com/eggplantiny", icon: Twitter },
   ],
 };
 
@@ -68,6 +68,8 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-muted-foreground hover:text-white transition-colors flex items-center gap-1"
                   >
                     {link.label}
