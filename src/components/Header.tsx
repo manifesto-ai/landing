@@ -20,50 +20,66 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-8 h-8">
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 blur-sm opacity-75" />
-              <div className="relative w-full h-full rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 blur-sm opacity-75" />
+              <div className="relative w-full h-full rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">M</span>
               </div>
             </div>
-            <span className="text-xl font-bold text-white">Manifesto AI</span>
+            <span className="text-xl font-bold text-white">Manifesto</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
-              href="#features"
-              className="text-sm text-slate-300 hover:text-white transition-colors"
+              href="#flow-xray"
+              className="text-sm text-muted-foreground hover:text-white transition-colors"
             >
-              Features
+              Flow
             </Link>
             <Link
-              href="#how-it-works"
-              className="text-sm text-slate-300 hover:text-white transition-colors"
+              href="#simulation"
+              className="text-sm text-muted-foreground hover:text-white transition-colors"
             >
-              How It Works
+              Simulation
             </Link>
             <Link
-              href="https://github.com/manifesto-ai/core.git"
+              href="#governance"
+              className="text-sm text-muted-foreground hover:text-white transition-colors"
+            >
+              Governance
+            </Link>
+            <Link
+              href="#architecture"
+              className="text-sm text-muted-foreground hover:text-white transition-colors"
+            >
+              Architecture
+            </Link>
+            <Link
+              href="https://manifesto-ai.dev"
+              className="text-sm text-muted-foreground hover:text-white transition-colors"
+            >
+              Docs
+            </Link>
+            <Link
+              href="https://github.com/manifesto-ai/core"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-slate-300 hover:text-white transition-colors flex items-center gap-1"
+              className="text-sm text-muted-foreground hover:text-white transition-colors flex items-center gap-1"
             >
               <Github className="w-4 h-4" />
               GitHub
             </Link>
             <Link
-              href="https://playground.manifesto-ai.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium text-white rounded-lg border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-all"
+              href="https://manifesto-ai.dev/guide/quick-start"
+              className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 transition-colors"
             >
-              Playground
+              Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-slate-300 hover:text-white"
+            className="md:hidden p-2 text-muted-foreground hover:text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -80,39 +96,58 @@ export default function Header() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden py-4 border-t border-slate-800"
+            className="md:hidden py-4 border-t border-border"
           >
             <div className="flex flex-col gap-4">
               <Link
-                href="#features"
-                className="text-sm text-slate-300 hover:text-white transition-colors"
+                href="#flow-xray"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Features
+                Flow
               </Link>
               <Link
-                href="#how-it-works"
-                className="text-sm text-slate-300 hover:text-white transition-colors"
+                href="#simulation"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                How It Works
+                Simulation
               </Link>
               <Link
-                href="https://github.com/manifesto-ai/core.git"
+                href="#governance"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Governance
+              </Link>
+              <Link
+                href="#architecture"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Architecture
+              </Link>
+              <Link
+                href="https://manifesto-ai.dev"
+                className="text-sm text-muted-foreground hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Docs
+              </Link>
+              <Link
+                href="https://github.com/manifesto-ai/core"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-slate-300 hover:text-white transition-colors flex items-center gap-1"
+                className="text-sm text-muted-foreground hover:text-white transition-colors flex items-center gap-1"
               >
                 <Github className="w-4 h-4" />
                 GitHub
               </Link>
               <Link
-                href="https://playground.manifesto-ai.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 text-sm font-medium text-white rounded-lg border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-all text-center"
+                href="https://manifesto-ai.dev/guide/quick-start"
+                className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 transition-colors text-center"
               >
-                Playground
+                Get Started
               </Link>
             </div>
           </motion.div>

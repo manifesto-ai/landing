@@ -1,20 +1,28 @@
+"use client";
+
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import WhySection from "@/components/WhySection";
-import CodeShowcase from "@/components/CodeShowcase";
-import Features from "@/components/Features";
-import Architecture from "@/components/Architecture";
+import HeroSection from "@/components/HeroSection";
+import dynamic from "next/dynamic";
 import Footer from "@/components/Footer";
+
+const FlowXRaySection = dynamic(() => import("@/components/FlowXRaySection"), { ssr: false });
+const SimulationSection = dynamic(() => import("@/components/SimulationSection"), { ssr: false });
+const GovernanceSection = dynamic(() => import("@/components/GovernanceSection"), { ssr: false });
+const LineageSection = dynamic(() => import("@/components/LineageSection"), { ssr: false });
+const MelEditorSection = dynamic(() => import("@/components/MelEditorSection"), { ssr: false });
+import ArchitectureSection from "@/components/ArchitectureSection";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-background">
       <Header />
-      <Hero />
-      <WhySection />
-      <CodeShowcase />
-      <Features />
-      <Architecture />
+      <HeroSection />
+      <FlowXRaySection />
+      <LineageSection />
+      <SimulationSection />
+      <GovernanceSection />
+      <MelEditorSection />
+      <ArchitectureSection />
       <Footer />
     </main>
   );
