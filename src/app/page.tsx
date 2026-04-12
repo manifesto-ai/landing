@@ -18,12 +18,12 @@ export default function Home() {
     <main className="relative min-h-screen bg-background">
       <Header />
       <HeroSection />
-      <ShowcaseSection />
-      <GovernanceSection />
+      <FlowXRaySection />
       <LineageSection />
       <SimulationSection />
-      <FlowXRaySection />
+      <GovernanceSection />
       <MelEditorSection />
+      <ShowcaseSection />
       <ArchitectureSection />
       <Footer />
     </main>
