@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const links = {
   resources: [
-    { label: "Documentation", href: "https://doc.manifesto-ai.dev" },
-    { label: "Quick Start", href: "https://doc.manifesto-ai.dev/guide/quick-start" },
-    { label: "API Reference", href: "https://doc.manifesto-ai.dev/api/" },
+    { label: "Documentation", href: "https://docs.manifesto-ai.dev" },
+    { label: "Quick Start", href: "https://docs.manifesto-ai.dev/guide/quick-start" },
+    { label: "API Reference", href: "https://docs.manifesto-ai.dev/api/" },
   ],
   community: [
     { label: "GitHub", href: "https://github.com/manifesto-ai/core", icon: Github },
