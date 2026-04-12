@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Bot, Shield, GitBranch, Eye } from "lucide-react";
+import { ExternalLink, Bot, Shield, GitBranch, Eye, Github } from "lucide-react";
 
 const features = [
   {
@@ -59,6 +59,38 @@ export default function ShowcaseSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="space-y-8"
         >
+          {/* Preview Screenshot */}
+          <a
+            href="https://taskflow.manifesto-ai.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block gradient-border glow group"
+          >
+            <div className="bg-card rounded-xl p-2 sm:p-3 overflow-hidden">
+              <div className="relative rounded-lg overflow-hidden">
+                <img
+                  src="/taskflow-preview.png"
+                  alt="TaskFlow — AI-powered task management with Manifesto governance"
+                  className="w-full rounded-lg transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                  <span className="flex items-center gap-2 px-6 py-3 rounded-xl bg-violet-600/90 text-white text-sm font-medium backdrop-blur-sm">
+                    Try TaskFlow Live
+                    <ExternalLink className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between px-2 pt-3 pb-1">
+                <span className="text-xs font-mono text-muted">
+                  taskflow.manifesto-ai.dev
+                </span>
+                <span className="text-xs text-violet-400 font-mono">
+                  Powered by GPT-5.4-nano + Manifesto SDK
+                </span>
+              </div>
+            </div>
+          </a>
+
           {/* Feature Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {features.map((feature, i) => {
@@ -93,7 +125,7 @@ export default function ShowcaseSection() {
           </div>
 
           {/* CTA */}
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://taskflow.manifesto-ai.dev"
               target="_blank"
@@ -103,9 +135,15 @@ export default function ShowcaseSection() {
               Try TaskFlow Live
               <ExternalLink className="w-4 h-4" />
             </a>
-            <p className="text-xs text-muted-foreground mt-3">
-              Built with Manifesto SDK + AI Agent — fully open source
-            </p>
+            <a
+              href="https://github.com/manifesto-ai/taskflow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium text-white border border-violet-500/20 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all"
+            >
+              <Github className="w-4 h-4" />
+              View Source
+            </a>
           </div>
         </motion.div>
       </div>
