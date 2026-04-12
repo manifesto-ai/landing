@@ -138,7 +138,7 @@ export default function ArchitectureSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -160,7 +160,7 @@ export default function ArchitectureSection() {
                 key={node.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ delay: i * 0.1 }}
                 onClick={() => setSelected(isSelected ? null : node.id)}
                 className={`relative p-5 rounded-xl border transition-all text-left ${
@@ -281,16 +281,15 @@ export default function ArchitectureSection() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mt-12 text-center"
         >
-          <div className="inline-block px-6 py-4 rounded-xl bg-card border border-border">
+          <div className="px-4 sm:px-6 py-4 rounded-xl bg-card border border-border text-left">
             <div className="text-xs font-mono text-muted mb-2 uppercase tracking-wider">
               Composition Pattern
             </div>
-            <code className="text-sm text-violet-300">
-              withGovernance(withLineage(createManifesto(schema,
-              effects))).activate()
+            <code className="text-xs sm:text-sm text-violet-300 break-all sm:break-normal">
+              withGovernance(withLineage(createManifesto(schema, effects))).activate()
             </code>
           </div>
         </motion.div>
