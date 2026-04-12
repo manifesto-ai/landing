@@ -23,8 +23,8 @@ export default function Home() {
       <SimulationSection />
       <GovernanceSection />
       <MelEditorSection />
-      <ArchitectureSection />
       <ShowcaseSection />
+      <ArchitectureSection />
       <Footer />
     </main>
   );
