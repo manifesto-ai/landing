@@ -11,6 +11,7 @@ const GovernanceSection = dynamic(() => import("@/components/GovernanceSection")
 const LineageSection = dynamic(() => import("@/components/LineageSection"), { ssr: false });
 const MelEditorSection = dynamic(() => import("@/components/MelEditorSection"), { ssr: false });
 import ArchitectureSection from "@/components/ArchitectureSection";
+import ShowcaseSection from "@/components/ShowcaseSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <GovernanceSection />
       <MelEditorSection />
       <ArchitectureSection />
+      <ShowcaseSection />
       <Footer />
     </main>
   );
