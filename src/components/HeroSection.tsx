@@ -105,6 +105,8 @@ export default function HeroSection() {
           >
             <a
               href="https://docs.manifesto-ai.dev/guide/quick-start"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative px-8 py-4 rounded-xl font-medium text-white overflow-hidden transition-all hover:scale-105"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-purple-500" />
@@ -117,6 +119,8 @@ export default function HeroSection() {
 
             <a
               href="https://docs.manifesto-ai.dev/guide/introduction"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl font-medium text-white border border-violet-500/20 hover:border-violet-500/40 hover:bg-violet-500/5 transition-all"
             >
               Learn the Model
